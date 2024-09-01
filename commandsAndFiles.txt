@@ -13,3 +13,9 @@ EF Core Migrations
 
 Add-Migration "Name of Migration"
 Update-Database
+
+
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
