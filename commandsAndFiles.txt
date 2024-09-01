@@ -1,0 +1,10 @@
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+Inherit DbContext
+(DbContexOptions dbContexOptions) : base(dbContexOptions)
+
+builder.Services.AddDbContext<ContextClass>( options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TestConnection"));
+});
