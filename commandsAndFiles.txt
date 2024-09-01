@@ -8,3 +8,8 @@ builder.Services.AddDbContext<ContextClass>( options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("TestConnection"));
 });
+
+EF Core Migrations 
+
+Add-Migration "Name of Migration"
+Update-Database
